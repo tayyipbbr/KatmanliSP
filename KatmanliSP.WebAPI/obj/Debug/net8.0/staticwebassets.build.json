@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "AzqT/VPm+0yC6YTDOFagZ4pzJSLHT+mRbLZqxbFxIGQ=",
+  "Source": "KatmanliSP.WebAPI",
+  "BasePath": "_content/KatmanliSP.WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

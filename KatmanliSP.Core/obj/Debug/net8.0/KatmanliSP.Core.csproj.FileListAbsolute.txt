@@ -1,0 +1,12 @@
+C:\Users\RECEPTAYYİPBİBER\Source\Repos\NTierSP\KatmanliSP.Core\bin\Debug\net8.0\KatmanliSP.Core.deps.json
+C:\Users\RECEPTAYYİPBİBER\Source\Repos\NTierSP\KatmanliSP.Core\bin\Debug\net8.0\KatmanliSP.Core.dll
+C:\Users\RECEPTAYYİPBİBER\Source\Repos\NTierSP\KatmanliSP.Core\bin\Debug\net8.0\KatmanliSP.Core.pdb
+C:\Users\RECEPTAYYİPBİBER\Source\Repos\NTierSP\KatmanliSP.Core\obj\Debug\net8.0\KatmanliSP.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RECEPTAYYİPBİBER\Source\Repos\NTierSP\KatmanliSP.Core\obj\Debug\net8.0\KatmanliSP.Core.AssemblyInfoInputs.cache
+C:\Users\RECEPTAYYİPBİBER\Source\Repos\NTierSP\KatmanliSP.Core\obj\Debug\net8.0\KatmanliSP.Core.AssemblyInfo.cs
+C:\Users\RECEPTAYYİPBİBER\Source\Repos\NTierSP\KatmanliSP.Core\obj\Debug\net8.0\KatmanliSP.Core.csproj.CoreCompileInputs.cache
+C:\Users\RECEPTAYYİPBİBER\Source\Repos\NTierSP\KatmanliSP.Core\obj\Debug\net8.0\KatmanliSP.Core.sourcelink.json
+C:\Users\RECEPTAYYİPBİBER\Source\Repos\NTierSP\KatmanliSP.Core\obj\Debug\net8.0\KatmanliSP.Core.dll
+C:\Users\RECEPTAYYİPBİBER\Source\Repos\NTierSP\KatmanliSP.Core\obj\Debug\net8.0\refint\KatmanliSP.Core.dll
+C:\Users\RECEPTAYYİPBİBER\Source\Repos\NTierSP\KatmanliSP.Core\obj\Debug\net8.0\KatmanliSP.Core.pdb
+C:\Users\RECEPTAYYİPBİBER\Source\Repos\NTierSP\KatmanliSP.Core\obj\Debug\net8.0\ref\KatmanliSP.Core.dll
