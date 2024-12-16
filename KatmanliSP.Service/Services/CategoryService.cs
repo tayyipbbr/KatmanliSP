@@ -4,98 +4,74 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using KatmanliSP.Core.Base;
 using KatmanliSP.Core.DTOs.CategoryDTO;
 using KatmanliSP.Core.ResponseMessages;
 using KatmanliSP.DataAccess.Repositories;
 using Microsoft.Data.SqlClient;
+using Newtonsoft.Json;
 
 namespace KatmanliSP.Service.Services
 {
-    public class CategoryService
+    public class CategoryService 
     {
-        private readonly string _connnectionString;
-        public CategoryService(string connnectionString)
+        private readonly ParameterList _parameterList;
+        private readonly SqlContactBase _sqlcontactBase;
+
+        public CategoryService(ParameterList parameterList, SqlContactBase sqlContactBase)
         {
-            _connnectionString = connnectionString;
+            _parameterList = parameterList; 
+            _sqlcontactBase = sqlContactBase;
         }
 
-        public List<GetAllCategoryDTO> GetAllCategories()
+        //geri dönüş tiplerini düzeltelim
+        public string AddCategory(CreateCategoryDTO createCategoryDTO)
         {
-            List<GetAllCategoryDTO> Categories = new List<GetAllCategoryDTO>();
+            //ParameterList parameterList = new ParameterList();                                  her metotta newlemek bellek şişirebilir. resetleyip kullanıyorum.
 
-            using (SqlConnection connection = new SqlConnection(_connnectionString)) // _conn verisinden bir sql bağlantısı oluşturur.
-            {
-                SqlCommand command = new SqlCommand("sp_GetAllCategories", connection); // command yani bağlantı açıyoruz,
-                command.CommandType = CommandType.StoredProcedure; // command tipini veriyoruz.
-                connection.Open();
+            _parameterList.Reset();
 
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        Categories.Add(new GetAllCategoryDTO
-                        {
-                            Name = reader.GetString("Name"),
-                            Description = reader.GetString("Description"),
-                            Id = reader.GetInt32("Id")
-                            //Id = Convert.ToInt32(reader["Id"])
-                            //Name = reader["Name"].ToString(),
-                            //Description = reader["Description"].ToString()
-                        });
-                    }
-                }
-            }
-            return Categories;
+            _parameterList.Add("@Name", createCategoryDTO.Name);                                //parameterList'ten _parameterList'e çevrildi.
+            _parameterList.Add("@Description", createCategoryDTO.Description);
+           // parameterList.Add("@CreatedDate",DateTime.Now);
+
+           var response = _sqlcontactBase.Contact(true, "sp_AddCategory", _parameterList);
+
+            return response;
         }
 
-        // Add Category
-
-        public void AddCategory(CreateCategoryDTO category)
+        public string DeleteCategory(DeleteCategoryDTO deleteCategoryDTO) 
         {
-            using (SqlConnection connection = new SqlConnection(_connnectionString))
-            {
-                SqlCommand command = new SqlCommand("sp_AddCategory", connection);
-                command.CommandType = CommandType.StoredProcedure;
+            _parameterList.Reset();
 
-                command.Parameters.AddWithValue("@Name", category.Name);
-                command.Parameters.AddWithValue("@Description", category.Description);
+            _parameterList.Add("@Id", deleteCategoryDTO.Id);
+            // spleri üst calss taki gibi doldur
+            var response = _sqlcontactBase.Contact(false, "sp_DeleteCategory", _parameterList);
 
-                connection.Open();
-                command.ExecuteNonQuery(); // sonuç döndürmeyen - insert,del,up vb. - sorgular için kullanılır.
-            }
+            return response;
         }
 
-        // Update Category
-
-        public void UpdateCategory(UpdateCategoryDTO category)
+        public void UpdateCategory(UpdateCategoryDTO updateCategoryDTO) 
         {
-            using (SqlConnection connection = new SqlConnection(_connnectionString))
-            {
-                SqlCommand command = new SqlCommand("sp_UpdateCategory", connection);
-                command.CommandType = CommandType.StoredProcedure;
+            _parameterList.Reset();
 
-                command.Parameters.AddWithValue("@Name", category.Name);
-                command.Parameters.AddWithValue("@Description", category.Description);
-                command.Parameters.AddWithValue("@Id", category.Id);
+            _parameterList.Add("@Id", updateCategoryDTO.Id);
+            _parameterList.Add("@Name", updateCategoryDTO.Name);
+            _parameterList.Add("@Description", updateCategoryDTO.Description);
 
-                connection.Open();
-                command.ExecuteNonQuery();
-            }
+            var response = _sqlcontactBase.Contact(true,"sp_UpdateCategory",_parameterList);
         }
 
-        public void DeleteCategory(int Id)
+        public List<GetAllCategoryDTO> GetAllCategory() 
         {
-            using (SqlConnection connection = new SqlConnection(_connnectionString))
-            {
-                SqlCommand command = new SqlCommand("sp_DeleteCategory", connection);
-                command.CommandType = CommandType.StoredProcedure;
+            _parameterList.Reset();
 
-                command.Parameters.AddWithValue("@Id", Id);
+            var response = _sqlcontactBase.Contact(true, "sp_GetAllCategories", _parameterList);
 
-                connection.Open();
-                command.ExecuteNonQuery();
-            }
+            var categories = JsonConvert.DeserializeObject<List<GetAllCategoryDTO>>(response);
+
+            return categories;
         }
-
     }
+
 }

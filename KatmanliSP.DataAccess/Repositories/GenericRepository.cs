@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using KatmanliSP.Core.Entities;
 using KatmanliSP.DataAccess.Context;
 using Microsoft.EntityFrameworkCore;
+using KatmanliSP.Core.Base;
 
 namespace KatmanliSP.DataAccess.Repositories
 {

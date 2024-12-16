@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KatmanliSP.WebAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+95d9cd75bc4658b08311426e52a7aff9c9c10419")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bc52a91c4bb79694a20217d983c64939c897d9dc")]
 [assembly: System.Reflection.AssemblyProductAttribute("KatmanliSP.WebAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KatmanliSP.WebAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

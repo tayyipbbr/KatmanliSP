@@ -8,9 +8,9 @@ namespace KatmanliSP.Core.ResponseMessages
 {
     public class Result : IResult
     {
-        public Result(bool isSuccess)
+        public Result(bool issuccess)
         {
-            IsSuccess = isSuccess;
+            Issuccess = issuccess;
         }
 
         public Result(string message)
@@ -18,13 +18,13 @@ namespace KatmanliSP.Core.ResponseMessages
             Message = message;
         }
 
-        public Result(bool isSuccses, string message)
+        public Result(bool issuccess, string message)
         {
             Message = message;
-            IsSuccess = isSuccses;
+            Issuccess = issuccess;
         }
 
         public string Message { get; set; }
-        public bool IsSuccess { get; set; }
+        public bool Issuccess { get; set; }
     }
 }

@@ -7,7 +7,7 @@ using KatmanliSP.Core.Entities;
 
 namespace KatmanliSP.Core.DTOs.CategoryDTO
 {
-    public class DeleteCategoryDTO : BaseEntity
+    public class DeleteCategoryDTO
     {
         public int Id { get; set; } // silmek için Id yeter
     }

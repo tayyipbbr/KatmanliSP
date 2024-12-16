@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KatmanliSP.DataAccess.Repositories
+namespace KatmanliSP.Core.Base
 {
     public interface IGeneticRepository<T> where T : class
     {

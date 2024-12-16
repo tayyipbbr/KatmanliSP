@@ -1,0 +1,200 @@
+[
+  {
+    "ContainingType": "KatmanliSP.WebAPI.Controllers.CategoryAPI",
+    "Method": "CreateCategory",
+    "RelativePath": "api/CategoryAPI/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createCategoryDTO",
+        "Type": "KatmanliSP.Core.DTOs.CategoryDTO.CreateCategoryDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "KatmanliSP.WebAPI.Controllers.CategoryAPI",
+    "Method": "DeleteCategory",
+    "RelativePath": "api/CategoryAPI/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteCategoryDTO",
+        "Type": "KatmanliSP.Core.DTOs.CategoryDTO.DeleteCategoryDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "KatmanliSP.WebAPI.Controllers.CategoryAPI",
+    "Method": "GetAllCategory",
+    "RelativePath": "api/CategoryAPI/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[KatmanliSP.Core.DTOs.CategoryDTO.GetAllCategoryDTO, KatmanliSP.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "KatmanliSP.WebAPI.Controllers.CategoryAPI",
+    "Method": "UpdateCategory",
+    "RelativePath": "api/CategoryAPI/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateCategoryDTO",
+        "Type": "KatmanliSP.Core.DTOs.CategoryDTO.UpdateCategoryDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "KatmanliSP.WebAPI.Controllers.ProductAPI",
+    "Method": "CreateProduct",
+    "RelativePath": "api/ProductAPI/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createProductDTO",
+        "Type": "KatmanliSP.Core.DTOs.ProductDTO.CreateProductDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "KatmanliSP.WebAPI.Controllers.ProductAPI",
+    "Method": "DeleteProduct",
+    "RelativePath": "api/ProductAPI/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteProductDTO",
+        "Type": "KatmanliSP.Core.DTOs.ProductDTO.DeleteProductDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "KatmanliSP.WebAPI.Controllers.ProductAPI",
+    "Method": "GetAllProducts",
+    "RelativePath": "api/ProductAPI/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[KatmanliSP.Core.DTOs.ProductDTO.GetAllProductDTO, KatmanliSP.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "KatmanliSP.WebAPI.Controllers.ProductAPI",
+    "Method": "UpdateProduct",
+    "RelativePath": "api/ProductAPI/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateProductDTO",
+        "Type": "KatmanliSP.Core.DTOs.ProductDTO.UpdateProductDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "KatmanliSP.WebAPI.Controllers.UserAPI",
+    "Method": "CreateCategory",
+    "RelativePath": "api/UserAPI",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createUserDTO",
+        "Type": "KatmanliSP.Core.DTOs.UserDTO.CreateUserDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

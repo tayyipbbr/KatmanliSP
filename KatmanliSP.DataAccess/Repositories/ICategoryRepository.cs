@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using KatmanliSP.Core.Base;
 using KatmanliSP.Core.DTOs.CategoryDTO;
 using KatmanliSP.Core.Entities;
 
