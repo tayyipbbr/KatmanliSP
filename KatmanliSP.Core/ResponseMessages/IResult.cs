@@ -9,6 +9,6 @@ namespace KatmanliSP.Core.ResponseMessages
     public interface IResult
     {
         public string Message { get; }
-        public bool IsSuccess { get; }
+        public bool Issuccess { get; }
     }
 }

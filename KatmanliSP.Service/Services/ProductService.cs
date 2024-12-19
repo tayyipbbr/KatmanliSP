@@ -25,8 +25,7 @@ namespace KatmanliSP.Service.Services
             _sqlcontactBase = sqlContactBase;
         }
 
-        //TODO: geri dönüş tiplerini düzeltelim MESSAGE vermeliyim, deleted,upped gibi.
-        public string AddProduct(CreateProductDTO createProductDTO)
+        public List<Dictionary<string, object>> AddProduct(CreateProductDTO createProductDTO)
         {
             //ParameterList parameterList = new ParameterList();            her metotta new yerine reset _param kullanıyorum.
 
@@ -42,7 +41,7 @@ namespace KatmanliSP.Service.Services
             return response;
         }
 
-        public string DeleteProduct(DeleteProductDTO deleteProductDTO)
+        public List<Dictionary<string, object>> DeleteProduct(DeleteProductDTO deleteProductDTO)
         {
             _parameterList.Reset();
 
@@ -54,7 +53,7 @@ namespace KatmanliSP.Service.Services
 
         }
 
-        public void UpdateProduct(UpdateProductDTO updateProductDTO)
+        public List<Dictionary<string, object>> UpdateProduct(UpdateProductDTO updateProductDTO)
         {
             _parameterList.Reset();
 
@@ -63,19 +62,50 @@ namespace KatmanliSP.Service.Services
             _parameterList.Add("@Name", updateProductDTO.Name);
             _parameterList.Add("@Description", updateProductDTO.Description);
 
-            _sqlcontactBase.Contact(true, "sp_UpdateProduct", _parameterList);
-            //return (int)Contact(true,"sp_UpdateCategory",parameters);
+            var response = _sqlcontactBase.Contact(true, "sp_UpdateProduct", _parameterList);
+
+            return response;
         }
 
         public List<GetAllProductDTO> GetAllProduct()
-        {    
+        {
             _parameterList.Reset();
 
-            var response = _sqlcontactBase.Contact(true, "sp_GetAllProducts", _parameterList);
-            var product = JsonConvert.DeserializeObject<List<GetAllProductDTO>>(response);
+            var listResult = new List<GetAllProductDTO>();
 
-            return product;
+            var response = _sqlcontactBase.Contact(true, "sp_GetAllProducts", _parameterList);
+
+            if (response != null)
+            {
+                response.ForEach(x =>
+                {
+                    var dto = new GetAllProductDTO()
+                    {
+                        Id = Convert.ToInt32(x["Id"]),
+                        Name = x["Name"].ToString(),
+                        Description = x["Description"].ToString(),
+                        InStock = Convert.ToInt32(x["InStock"])
+                    };
+                    listResult.Add(dto);
+                });
+            }
+
+            return listResult;
+
         }
     }
 
 }
+
+
+// ÇALIAŞN KOD, response deserialize edielmiyor (ListDic TO string failed)
+
+//public list<getallproductdto> getallproduct()
+//{
+//    _parameterlist.reset();
+
+//    var response = _sqlcontactbase.contact(true, "sp_getallproducts", _parameterlist);
+//    var product = jsonconvert.deserializeobject<list<getallproductdto>>(response);
+
+//    return product;
+//}

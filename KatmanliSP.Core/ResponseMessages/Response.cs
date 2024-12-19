@@ -8,19 +8,52 @@ namespace KatmanliSP.Core.ResponseMessages
 {
     public class Response<T> : Result, IResponse<T>
     {
-        public Response(bool issuccess) : base(issuccess)
+        public Response(bool issuccess, T data) : base(issuccess)
         {
+            Data = data;
         }
-
-        public Response(string message) : base(message)
+        public Response(T data, string message, bool issuccess) : base(issuccess, message)
         {
+            Data = data;
+            Message = message;
+            Issuccess = issuccess;
         }
-
+        public Response(string message) : base(default, message)
+        {
+            Message = message;
+        }
         public Response(bool issuccess, string message) : base(issuccess, message)
         {
+            Issuccess = issuccess;
+            Message = message;
         }
-
-        public T Data { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
+        public T Data { get; set; }
     }
 }
+
+/*
+ *         public Response(bool issuccess, T data) : base(issuccess) //
+        {
+            Data = data;
+        }
+
+        public Response(bool issuccess, string message, T data) : base(issuccess, message) //
+        {
+            Data = data;
+            Message = message;
+            Issuccess = issuccess;
+        }
+
+        public Response(string message) : base(message) //
+        {
+            Message = message;
+        }
+
+        public Response(bool issuccess, string message) : base(issuccess, message) //
+        {
+            Issuccess = issuccess;
+            Message = message;
+        }
+
+        public T Data { get; set; } //
+ */

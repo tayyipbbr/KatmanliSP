@@ -25,7 +25,7 @@ namespace KatmanliSP.Service.Services
         }
 
         //geri dönüş tiplerini düzeltelim
-        public string AddCategory(CreateCategoryDTO createCategoryDTO)
+        public List<Dictionary<string, object>> AddCategory(CreateCategoryDTO createCategoryDTO)
         {
             //ParameterList parameterList = new ParameterList();                                  her metotta newlemek bellek şişirebilir. resetleyip kullanıyorum.
 
@@ -33,25 +33,25 @@ namespace KatmanliSP.Service.Services
 
             _parameterList.Add("@Name", createCategoryDTO.Name);                                //parameterList'ten _parameterList'e çevrildi.
             _parameterList.Add("@Description", createCategoryDTO.Description);
-           // parameterList.Add("@CreatedDate",DateTime.Now);
+            // parameterList.Add("@CreatedDate",DateTime.Now); SPDE YAPILIR
 
-           var response = _sqlcontactBase.Contact(true, "sp_AddCategory", _parameterList);
+            var response = _sqlcontactBase.Contact(true, "sp_AddCategory", _parameterList);
 
             return response;
         }
 
-        public string DeleteCategory(DeleteCategoryDTO deleteCategoryDTO) 
+        public List<Dictionary<string, object>> DeleteCategory(DeleteCategoryDTO deleteCategoryDTO) 
         {
             _parameterList.Reset();
 
             _parameterList.Add("@Id", deleteCategoryDTO.Id);
-            // spleri üst calss taki gibi doldur
+
             var response = _sqlcontactBase.Contact(false, "sp_DeleteCategory", _parameterList);
 
             return response;
         }
 
-        public void UpdateCategory(UpdateCategoryDTO updateCategoryDTO) 
+        public List<Dictionary<string, object>> UpdateCategory(UpdateCategoryDTO updateCategoryDTO) 
         {
             _parameterList.Reset();
 
@@ -60,18 +60,37 @@ namespace KatmanliSP.Service.Services
             _parameterList.Add("@Description", updateCategoryDTO.Description);
 
             var response = _sqlcontactBase.Contact(true,"sp_UpdateCategory",_parameterList);
+
+            return response;
         }
 
-        public List<GetAllCategoryDTO> GetAllCategory() 
+        public List<GetAllCategoryDTO> GetAllCategory()         // list değil, SP DTO alan IResponse dönmeli ListDTO
         {
             _parameterList.Reset();
 
+            var listResult = new List<GetAllCategoryDTO>();
+
             var response = _sqlcontactBase.Contact(true, "sp_GetAllCategories", _parameterList);
 
-            var categories = JsonConvert.DeserializeObject<List<GetAllCategoryDTO>>(response);
+            if (response != null)
+            {
+                response.ForEach(x =>
+                {
+                    var dto = new GetAllCategoryDTO()
+                    {
+                        Name = x["Name"].ToString(),
+                        Id = Convert.ToInt32(x["Id"]),
+                        Description = x["Description"].ToString()
+                    };
 
-            return categories;
+                    listResult.Add(dto);
+                });
+            }
+
+            return listResult;
+
+            // listResult DTO'ları sorunsuz dönüyor. API'den çekilecek.
         }
     }
-
+    
 }

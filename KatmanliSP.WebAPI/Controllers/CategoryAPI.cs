@@ -1,4 +1,6 @@
 ﻿using KatmanliSP.Core.DTOs.CategoryDTO;
+using KatmanliSP.Core.DTOs.ProductDTO;
+using KatmanliSP.Core.ResponseMessages;
 using KatmanliSP.Service.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -17,31 +19,103 @@ namespace KatmanliSP.WebAPI.Controllers
         }
 
         [HttpPost("Create")]
-        public string CreateCategory(CreateCategoryDTO createCategoryDTO) 
+        public IActionResult CreateCategory(CreateCategoryDTO createCategoryDTO)            // IAction 
         {
-            var response = _categoryService.AddCategory(createCategoryDTO);
+            try
+            {
+                _categoryService.AddCategory(createCategoryDTO);
 
-            return response;
+                var response = new Response<string>(
+                    issuccess: true,
+                    message: "Kategori başarı ile oluşturuldu."
+                );
+
+                return Ok(response); // HTTP 200 ve response objesi döner
+            }
+            catch (Exception ex)
+            {
+                var response = new Response<string>(
+                    issuccess: false,
+                    message: "Kategori oluşturulamadı."
+                );
+
+                return StatusCode(500, response); // HTTP 500 hatası döner
+            }
         }
 
         [HttpDelete("Delete")]   
-        public void DeleteCategory(DeleteCategoryDTO deleteCategoryDTO) 
+        public IActionResult DeleteCategory(DeleteCategoryDTO deleteCategoryDTO) 
         {
-            _categoryService.DeleteCategory(deleteCategoryDTO);
+            try
+            {
+                _categoryService.DeleteCategory(deleteCategoryDTO);
+
+                var response = new Response<string>(
+                    issuccess: true,
+                    message: "Kategori silme işlemi başarılı."
+                );
+
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                var response = new Response<string>(
+                    issuccess: false,
+                    message: "Kategori silme başarısız."
+                );
+
+                return StatusCode(500, response); 
+            }
         }
 
         [HttpPut("Update")]
-        public void UpdateCategory(UpdateCategoryDTO updateCategoryDTO) 
+        public IActionResult UpdateCategory(UpdateCategoryDTO updateCategoryDTO) 
         {
-            _categoryService.UpdateCategory(updateCategoryDTO);
+            try
+            {
+                _categoryService.UpdateCategory(updateCategoryDTO);
+
+                var response = new Response<string>(
+                    issuccess: true,
+                    message: "Kategori güncelleme işlemi başarılı."
+                );
+
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                var response = new Response<string>(
+                    issuccess: false,
+                    message: "Kategori güncelleme başarısız."
+                );
+
+                return StatusCode(500, response);
+            }
         }
 
         [HttpGet("GetAll")]
-        public List<GetAllCategoryDTO> GetAllCategory()
+        public IActionResult GetAllCategory()
         {
-            var response = _categoryService.GetAllCategory();
+            try
+            {
+                _categoryService.GetAllCategory();
 
-            return response;
+                var response = new Response<string>(
+                    issuccess: true,
+                    message: "Tüm kategoriler çağırıldı."
+                );
+
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                var response = new Response<string>(
+                    issuccess: false,
+                    message: "Kategori çağırma başarısız."
+                );
+
+                return StatusCode(500, response);
+            }
         }
 
     }

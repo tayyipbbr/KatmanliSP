@@ -26,5 +26,7 @@ namespace KatmanliSP.Core.ResponseMessages
 
         public string Message { get; set; }
         public bool Issuccess { get; set; }
+
+      //  public bool IsSuccess => throw new NotImplementedException();
     }
 }

@@ -2,6 +2,7 @@
 using KatmanliSP.Core.DTOs.UserDTO;
 using KatmanliSP.Service.Services;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KatmanliSP.WebAPI.Controllers
@@ -18,10 +19,16 @@ namespace KatmanliSP.WebAPI.Controllers
             _userService = userService;
         }
 
-        [HttpPost]
-        public void CreateCategory(CreateUserDTO createUserDTO)
+        [HttpPost("Login")]
+        public IActionResult Login(LoginUserDTO loginUserDTO)
         {
-            _userService.AddUser(createUserDTO);
+            var response = _userService.Login(loginUserDTO);
+
+            if (response.Issuccess)
+            {
+                return Ok(response);
+            }
+            return BadRequest(response.Message);
         }
     }
 }

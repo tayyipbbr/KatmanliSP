@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using KatmanliSP.Core.DTOs.CategoryDTO;
-using KatmanliSP.Core.Entities;
-using KatmanliSP.Core.ResponseMessages;
+﻿using System.Data;
 using Microsoft.Data.SqlClient;
 using Newtonsoft.Json;
 
@@ -25,12 +17,13 @@ namespace KatmanliSP.Core.Base
 
 
     
-        public string Contact(bool createOrdelete, string spName, ParameterList parameterlist) // TODO: string ve int 2 dönüş sebebi ile object yaptım / int çevirmek gerek?
+        public List<Dictionary<string, object>> Contact(bool createOrdelete, string spName, ParameterList parameterlist) // TODO: string ve int 2 dönüş sebebi ile object yaptım / int çevirmek gerek?
         {
-            if(createOrdelete) 
+            var results = new List<Dictionary<string, object>>();
+            if (createOrdelete) 
             {
 
-                var results = new List<Dictionary<string, object>>();
+               
 
                 using (SqlConnection connection = new SqlConnection(_connectionString))
                 {
@@ -64,41 +57,42 @@ namespace KatmanliSP.Core.Base
                     //command.ExecuteNonQuery();
                 }
 
-                return JsonConvert.SerializeObject(results);
+                return results;
 
                 //return spName; // TODO: ResponseMessage ekle
             }
             else
             {
-                using (SqlConnection connection = new SqlConnection(_connectionString))
-                {
-                    SqlCommand command = new SqlCommand(spName, connection); // TODO: sp name param eklenecek (spName ??)
-                    command.CommandType = CommandType.StoredProcedure;
+                return results;
+                //using (SqlConnection connection = new SqlConnection(_connectionString))
+                //{
+                //    SqlCommand command = new SqlCommand(spName, connection); // TODO: sp name param eklenecek (spName ??)
+                //    command.CommandType = CommandType.StoredProcedure;
 
-                    foreach (var parameter in parameterlist) // değeri bilmediğin karşılamalar = var
-                    {
-                        command.Parameters.AddWithValue(parameter.Name, parameter.Value);
-                    }
+                //    foreach (var parameter in parameterlist) // değeri bilmediğin karşılamalar = var
+                //    {
+                //        command.Parameters.AddWithValue(parameter.Name, parameter.Value);
+                //    }
 
-                    connection.Open(); 
+                //    connection.Open(); 
 
-                    using (SqlDataReader reader = command.ExecuteReader()) 
-                    {
-                        if (reader.Read()) 
-                        {
-                            // ilk sütun silinen nesnenin adını içerir.
-                            return reader[0].ToString();
-                        }
-                        else 
-                        {
-                            return "Nothing deleted.";
-                        }
-                    }
+                //    using (SqlDataReader reader = command.ExecuteReader()) 
+                //    {
+                //        if (reader.Read()) 
+                //        {
+                //            // ilk sütun silinen nesnenin adını içerir.
+                //            return reader[0].ToString();
+                //        }
+                //        else 
+                //        {
+                //            return "Nothing deleted.";
+                //        }
+                //    }
 
-                    //var rowsAffected = command.ExecuteReader();
+                //    //var rowsAffected = command.ExecuteReader();
 
-                    //return rowsAffected;
-                }
+                //    //return rowsAffected;
+                //}
             }
         }
     }

@@ -29,6 +29,10 @@ builder.Services.AddScoped<CategoryService>();
 builder.Services.AddScoped<ProductService>();
 builder.Services.AddScoped<UserService>();
 
+// DI
+
+builder.Services.AddScoped<ITokenCreator, TokenCreator>();
+
 
 var app = builder.Build();
 

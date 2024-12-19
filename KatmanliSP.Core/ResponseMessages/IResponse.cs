@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace KatmanliSP.Core.ResponseMessages
 {
-    public interface IResponse : IResult
+    public interface IResponse<T> : IResult
     {
-
+        T Data { get; set; }
     }
 }

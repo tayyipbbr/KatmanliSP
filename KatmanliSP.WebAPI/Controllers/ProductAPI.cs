@@ -1,4 +1,5 @@
 ﻿using KatmanliSP.Core.DTOs.ProductDTO;
+using KatmanliSP.Core.ResponseMessages;
 using KatmanliSP.Service.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -17,29 +18,112 @@ namespace KatmanliSP.WebAPI.Controllers
         }
 
         [HttpPost("Create")]
-        public void CreateProduct(CreateProductDTO createProductDTO)
+        public IActionResult CreateProduct(CreateProductDTO createProductDTO)
         {
-            _productService.AddProduct(createProductDTO);
+            try
+            {
+                _productService.AddProduct(createProductDTO);
+
+                var response = new Response<string>(
+                    issuccess: true,
+                    message: "Product başarı ile oluşturuldu."
+                );
+
+                return Ok(response); // HTTP 200 ve response objesi döner
+            }
+            catch (Exception ex)
+            {
+                var response = new Response<string>(
+                    issuccess: false,
+                    message: "Product oluşturulamadı."
+                );
+
+                return StatusCode(500, response); // HTTP 500 hatası döner
+            }
         }
 
         [HttpDelete("Delete")]      
-        public void DeleteProduct(DeleteProductDTO deleteProductDTO)
+        public IActionResult DeleteProduct(DeleteProductDTO deleteProductDTO)
         {
-            _productService.DeleteProduct(deleteProductDTO);
+            try
+            {
+                _productService.DeleteProduct(deleteProductDTO);
+
+                var response = new Response<string>(
+                    issuccess: true,
+                    message: "Product silme başarı ile gerçekleşti."
+                );
+
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                var response = new Response<string>(
+                    issuccess: false,
+                    message: "Product silme başasırız."
+                );
+
+                return StatusCode(500, response);
+            }
         }
 
         [HttpPut("Update")]
-        public void UpdateProduct(UpdateProductDTO updateProductDTO)
+        public IActionResult UpdateProduct(UpdateProductDTO updateProductDTO)
         {
-            _productService.UpdateProduct(updateProductDTO);
+            try
+            {
+                _productService.UpdateProduct(updateProductDTO);
+
+                var response = new Response<string>(
+                    issuccess: true,
+                    message: "Product güncelleme işlemi başarı ile gerçekleşti."
+                );
+
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                var response = new Response<string>(
+                    issuccess: false,
+                    message: "Product güncelleme başasırız."
+                );
+
+                return StatusCode(500, response);
+            }
         }
 
         [HttpGet("GetAll")]
-        public List<GetAllProductDTO> GetAllProducts()
+        public IActionResult GetAllProducts()
         {
-            var response = _productService.GetAllProduct();
+            try
+            {
+                _productService.GetAllProduct();
 
-            return response;
+                var response = new Response<string>(
+                    issuccess: true,
+                    message: "Tüm product'lar çağırıldı."
+                );
+
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                var response = new Response<string>(
+                    issuccess: false,
+                    message: "Product çağırma başarısız."
+                );
+
+                return StatusCode(500, response);
+            }
         }
     }
 }
+
+// eski hali
+
+//public List<GetAllProductDTO> GetAllProducts()
+//{
+//    var response = _productService.GetAllProduct();
+
+//    return response;
+//}

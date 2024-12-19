@@ -1,0 +1,149 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\RECEPTAYY\u0130PB\u0130BER\\Source\\Repos\\NTierSP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EE30303F-49D7-4E2F-BEC9-4141668607DB}|KatmanliSP.Service\\KatmanliSP.Service.csproj|c:\\users\\receptayy\u0130pb\u0130ber\\source\\repos\\ntiersp\\katmanlisp.service\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE30303F-49D7-4E2F-BEC9-4141668607DB}|KatmanliSP.Service\\KatmanliSP.Service.csproj|solutionrelative:katmanlisp.service\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1966F753-14B9-4D02-B78A-339440BAFC9B}|KatmanliSP.Core\\KatmanliSP.Core.csproj|c:\\users\\receptayy\u0130pb\u0130ber\\source\\repos\\ntiersp\\katmanlisp.core\\base\\sqlcontactbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1966F753-14B9-4D02-B78A-339440BAFC9B}|KatmanliSP.Core\\KatmanliSP.Core.csproj|solutionrelative:katmanlisp.core\\base\\sqlcontactbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{016F8F12-A312-4A38-BAFC-5E1BE75618BC}|KatmanliSP.WebAPI\\KatmanliSP.WebAPI.csproj|c:\\users\\receptayy\u0130pb\u0130ber\\source\\repos\\ntiersp\\katmanlisp.webapi\\controllers\\productapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{016F8F12-A312-4A38-BAFC-5E1BE75618BC}|KatmanliSP.WebAPI\\KatmanliSP.WebAPI.csproj|solutionrelative:katmanlisp.webapi\\controllers\\productapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{016F8F12-A312-4A38-BAFC-5E1BE75618BC}|KatmanliSP.WebAPI\\KatmanliSP.WebAPI.csproj|c:\\users\\receptayy\u0130pb\u0130ber\\source\\repos\\ntiersp\\katmanlisp.webapi\\controllers\\categoryapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{016F8F12-A312-4A38-BAFC-5E1BE75618BC}|KatmanliSP.WebAPI\\KatmanliSP.WebAPI.csproj|solutionrelative:katmanlisp.webapi\\controllers\\categoryapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE30303F-49D7-4E2F-BEC9-4141668607DB}|KatmanliSP.Service\\KatmanliSP.Service.csproj|c:\\users\\receptayy\u0130pb\u0130ber\\source\\repos\\ntiersp\\katmanlisp.service\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE30303F-49D7-4E2F-BEC9-4141668607DB}|KatmanliSP.Service\\KatmanliSP.Service.csproj|solutionrelative:katmanlisp.service\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE30303F-49D7-4E2F-BEC9-4141668607DB}|KatmanliSP.Service\\KatmanliSP.Service.csproj|c:\\users\\receptayy\u0130pb\u0130ber\\source\\repos\\ntiersp\\katmanlisp.service\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE30303F-49D7-4E2F-BEC9-4141668607DB}|KatmanliSP.Service\\KatmanliSP.Service.csproj|solutionrelative:katmanlisp.service\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{016F8F12-A312-4A38-BAFC-5E1BE75618BC}|KatmanliSP.WebAPI\\KatmanliSP.WebAPI.csproj|c:\\users\\receptayy\u0130pb\u0130ber\\source\\repos\\ntiersp\\katmanlisp.webapi\\controllers\\userapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{016F8F12-A312-4A38-BAFC-5E1BE75618BC}|KatmanliSP.WebAPI\\KatmanliSP.WebAPI.csproj|solutionrelative:katmanlisp.webapi\\controllers\\userapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SqlContactBase.cs",
+              "DocumentMoniker": "C:\\Users\\RECEPTAYY\u0130PB\u0130BER\\Source\\Repos\\NTierSP\\KatmanliSP.Core\\Base\\SqlContactBase.cs",
+              "RelativeDocumentMoniker": "KatmanliSP.Core\\Base\\SqlContactBase.cs",
+              "ToolTip": "C:\\Users\\RECEPTAYY\u0130PB\u0130BER\\Source\\Repos\\NTierSP\\KatmanliSP.Core\\Base\\SqlContactBase.cs",
+              "RelativeToolTip": "KatmanliSP.Core\\Base\\SqlContactBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T07:36:45.365Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\RECEPTAYY\u0130PB\u0130BER\\Source\\Repos\\NTierSP\\KatmanliSP.Service\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "KatmanliSP.Service\\Services\\ProductService.cs",
+              "ToolTip": "C:\\Users\\RECEPTAYY\u0130PB\u0130BER\\Source\\Repos\\NTierSP\\KatmanliSP.Service\\Services\\ProductService.cs",
+              "RelativeToolTip": "KatmanliSP.Service\\Services\\ProductService.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAwwFoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T13:56:31.313Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserAPI.cs",
+              "DocumentMoniker": "C:\\Users\\RECEPTAYY\u0130PB\u0130BER\\Source\\Repos\\NTierSP\\KatmanliSP.WebAPI\\Controllers\\UserAPI.cs",
+              "RelativeDocumentMoniker": "KatmanliSP.WebAPI\\Controllers\\UserAPI.cs",
+              "ToolTip": "C:\\Users\\RECEPTAYY\u0130PB\u0130BER\\Source\\Repos\\NTierSP\\KatmanliSP.WebAPI\\Controllers\\UserAPI.cs",
+              "RelativeToolTip": "KatmanliSP.WebAPI\\Controllers\\UserAPI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T14:45:03.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\RECEPTAYY\u0130PB\u0130BER\\Source\\Repos\\NTierSP\\KatmanliSP.Service\\Services\\CategoryService.cs",
+              "RelativeDocumentMoniker": "KatmanliSP.Service\\Services\\CategoryService.cs",
+              "ToolTip": "C:\\Users\\RECEPTAYY\u0130PB\u0130BER\\Source\\Repos\\NTierSP\\KatmanliSP.Service\\Services\\CategoryService.cs",
+              "RelativeToolTip": "KatmanliSP.Service\\Services\\CategoryService.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAawFsAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T14:17:45.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\RECEPTAYY\u0130PB\u0130BER\\Source\\Repos\\NTierSP\\KatmanliSP.Service\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "KatmanliSP.Service\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\RECEPTAYY\u0130PB\u0130BER\\Source\\Repos\\NTierSP\\KatmanliSP.Service\\Services\\UserService.cs",
+              "RelativeToolTip": "KatmanliSP.Service\\Services\\UserService.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAEwJEAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T14:43:32.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CategoryAPI.cs",
+              "DocumentMoniker": "C:\\Users\\RECEPTAYY\u0130PB\u0130BER\\Source\\Repos\\NTierSP\\KatmanliSP.WebAPI\\Controllers\\CategoryAPI.cs",
+              "RelativeDocumentMoniker": "KatmanliSP.WebAPI\\Controllers\\CategoryAPI.cs",
+              "ToolTip": "C:\\Users\\RECEPTAYY\u0130PB\u0130BER\\Source\\Repos\\NTierSP\\KatmanliSP.WebAPI\\Controllers\\CategoryAPI.cs",
+              "RelativeToolTip": "KatmanliSP.WebAPI\\Controllers\\CategoryAPI.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAlwGIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T14:23:44.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductAPI.cs",
+              "DocumentMoniker": "C:\\Users\\RECEPTAYY\u0130PB\u0130BER\\Source\\Repos\\NTierSP\\KatmanliSP.WebAPI\\Controllers\\ProductAPI.cs",
+              "RelativeDocumentMoniker": "KatmanliSP.WebAPI\\Controllers\\ProductAPI.cs",
+              "ToolTip": "C:\\Users\\RECEPTAYY\u0130PB\u0130BER\\Source\\Repos\\NTierSP\\KatmanliSP.WebAPI\\Controllers\\ProductAPI.cs",
+              "RelativeToolTip": "KatmanliSP.WebAPI\\Controllers\\ProductAPI.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAIwHUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T13:56:29.201Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
