@@ -38,7 +38,7 @@ namespace KatmanliSP.Service.Services
             _parameterList.Add("@Lastname", createUserDTO.Lastname);
             // parameterList.Add("@CreatedDate",DateTime.Now);
 
-            var response = _sqlcontactBase.Contact(true, "sp_AddUser", _parameterList);
+            var response = _sqlcontactBase.Contact("sp_AddUser", _parameterList);
 
             return response;
         }
@@ -100,7 +100,7 @@ namespace KatmanliSP.Service.Services
                 _parameterList.Add("@Username", registerUserDTO.Username);
                 _parameterList.Add("@Password", registerUserDTO.Password);
 
-                _sqlcontactBase.Contact(true, "sp_RegisterUser", _parameterList);
+                _sqlcontactBase.Contact("sp_RegisterUser", _parameterList);
 
                 return new Successful<string>("Kullanıcı girişi başarılı.");
             }
@@ -119,7 +119,7 @@ namespace KatmanliSP.Service.Services
                 _parameterList.Add("@UserId", userId);
                 _parameterList.Add("@RoleId", roleId);
 
-                _sqlcontactBase.Contact(true, "sp_AssignRoleToUser", _parameterList);
+                _sqlcontactBase.Contact("sp_AssignRoleToUser", _parameterList);
                 return new Successful<string>("Rol atama başarılı.");
             }
             catch (Exception ex)
@@ -137,7 +137,7 @@ namespace KatmanliSP.Service.Services
                 _parameterList.Add("@Username", loginUserDTO.Username);
                 _parameterList.Add("@Password", loginUserDTO.Password);
 
-                var user = _sqlcontactBase.Contact(true, "sp_LoginUser", _parameterList);
+                var user = _sqlcontactBase.Contact("sp_LoginUser", _parameterList);
 
                 if (user != null) // TODO: && user.userId > 0 yapamadim, user'da bir erisimim yok !!! 
                 {
@@ -171,7 +171,7 @@ namespace KatmanliSP.Service.Services
 
                 _parameterList.Add("@UserId", userId);
 
-                var roles = _sqlcontactBase.Contact(true, "sp_GetUserRoles", _parameterList).ToList(); // alt return kapattim ve tolist ekledim.
+                var roles = _sqlcontactBase.Contact("sp_GetUserRoles", _parameterList).ToList(); // alt return kapattim ve tolist ekledim.
 
                 return new List<char>();
 

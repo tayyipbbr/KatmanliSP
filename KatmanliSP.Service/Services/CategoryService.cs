@@ -35,7 +35,7 @@ namespace KatmanliSP.Service.Services
             _parameterList.Add("@Description", createCategoryDTO.Description);
             // parameterList.Add("@CreatedDate",DateTime.Now); SPDE YAPILIR
 
-            var response = _sqlcontactBase.Contact(true, "sp_AddCategory", _parameterList);
+            var response = _sqlcontactBase.Contact("sp_AddCategory", _parameterList);
 
             return response;
         }
@@ -46,7 +46,7 @@ namespace KatmanliSP.Service.Services
 
             _parameterList.Add("@Id", deleteCategoryDTO.Id);
 
-            var response = _sqlcontactBase.Contact(false, "sp_DeleteCategory", _parameterList);
+            var response = _sqlcontactBase.Contact("sp_DeleteCategory", _parameterList);
 
             return response;
         }
@@ -59,7 +59,7 @@ namespace KatmanliSP.Service.Services
             _parameterList.Add("@Name", updateCategoryDTO.Name);
             _parameterList.Add("@Description", updateCategoryDTO.Description);
 
-            var response = _sqlcontactBase.Contact(true,"sp_UpdateCategory",_parameterList);
+            var response = _sqlcontactBase.Contact("sp_UpdateCategory",_parameterList);
 
             return response;
         }
@@ -70,7 +70,7 @@ namespace KatmanliSP.Service.Services
 
             var listResult = new List<GetAllCategoryDTO>();
 
-            var response = _sqlcontactBase.Contact(true, "sp_GetAllCategories", _parameterList);
+            var response = _sqlcontactBase.Contact("sp_GetAllCategories", _parameterList);
 
             if (response != null)
             {

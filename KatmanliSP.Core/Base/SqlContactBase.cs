@@ -17,14 +17,11 @@ namespace KatmanliSP.Core.Base
 
 
     
-        public List<Dictionary<string, object>> Contact(bool createOrdelete, string spName, ParameterList parameterlist) // TODO: string ve int 2 dönüş sebebi ile object yaptım / int çevirmek gerek?
+        public List<Dictionary<string, object>> Contact(string spName, ParameterList parameterlist) // TODO: string ve int 2 dönüş sebebi ile object yaptım / int çevirmek gerek?
         {
             var results = new List<Dictionary<string, object>>();
-            if (createOrdelete) 
-            {
-
-               
-
+            //if (createordelete)
+            //{
                 using (SqlConnection connection = new SqlConnection(_connectionString))
                 {
                     SqlCommand command = new SqlCommand(spName, connection); // TODO: sp name param eklenecek (spName ??)
@@ -60,10 +57,10 @@ namespace KatmanliSP.Core.Base
                 return results;
 
                 //return spName; // TODO: ResponseMessage ekle
-            }
-            else
-            {
-                return results;
+            //}
+            //else
+            //{
+                //return results;
                 //using (SqlConnection connection = new SqlConnection(_connectionString))
                 //{
                 //    SqlCommand command = new SqlCommand(spName, connection); // TODO: sp name param eklenecek (spName ??)
@@ -93,7 +90,7 @@ namespace KatmanliSP.Core.Base
 
                 //    //return rowsAffected;
                 //}
-            }
+            //}
         }
     }
 }

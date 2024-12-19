@@ -36,7 +36,7 @@ namespace KatmanliSP.Service.Services
             _parameterList.Add("@InStock", createProductDTO.InStock);
             // parameterList.Add("@CreatedDate",DateTime.Now);
 
-            var response = _sqlcontactBase.Contact(true, "sp_AddProduct", _parameterList);
+            var response = _sqlcontactBase.Contact("sp_AddProduct", _parameterList);
 
             return response;
         }
@@ -47,7 +47,7 @@ namespace KatmanliSP.Service.Services
 
             
             _parameterList.Add("@Id", deleteProductDTO.Id);
-            var response = _sqlcontactBase.Contact(false, "sp_DeleteProduct", _parameterList);
+            var response = _sqlcontactBase.Contact("sp_DeleteProduct", _parameterList);
 
             return response;
 
@@ -62,7 +62,7 @@ namespace KatmanliSP.Service.Services
             _parameterList.Add("@Name", updateProductDTO.Name);
             _parameterList.Add("@Description", updateProductDTO.Description);
 
-            var response = _sqlcontactBase.Contact(true, "sp_UpdateProduct", _parameterList);
+            var response = _sqlcontactBase.Contact("sp_UpdateProduct", _parameterList);
 
             return response;
         }
@@ -73,7 +73,7 @@ namespace KatmanliSP.Service.Services
 
             var listResult = new List<GetAllProductDTO>();
 
-            var response = _sqlcontactBase.Contact(true, "sp_GetAllProducts", _parameterList);
+            var response = _sqlcontactBase.Contact("sp_GetAllProducts", _parameterList);
 
             if (response != null)
             {
