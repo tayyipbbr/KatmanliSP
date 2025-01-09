@@ -10,7 +10,7 @@ namespace KatmanliSP.Service.Services
 {
     public interface IUserService
     {
-        IResponse<OnlineUserDTO> Login(LoginUserDTO loginUserDTO);
-        List<char> GetUserRoles(int userId); // Class patlamasın diye char yaptım. DEBUG için.
+        IResponse<UserRoleDTO> Login(LoginUserDTO loginUserDTO);
+        public List<UserRoleDTO> GetUserRoles(int userId);
     }
 }

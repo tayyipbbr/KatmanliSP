@@ -8,8 +8,8 @@ namespace KatmanliSP.Core.Entities
 {
     public class Role : BaseEntity
     {
-        public int Id { get; set; }
         public string Rolename { get; set; }
+        public string DescriptionN { get; set; } // Yeni bir alan
         public ICollection<UserRole> UserRoles { get; set; }        // N-N
     }
 }

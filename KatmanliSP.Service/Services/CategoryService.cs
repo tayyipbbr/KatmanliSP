@@ -1,15 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using KatmanliSP.Core.Base;
+﻿using KatmanliSP.Core.Base;
 using KatmanliSP.Core.DTOs.CategoryDTO;
-using KatmanliSP.Core.ResponseMessages;
-using KatmanliSP.DataAccess.Repositories;
-using Microsoft.Data.SqlClient;
-using Newtonsoft.Json;
 
 namespace KatmanliSP.Service.Services
 {
@@ -64,7 +54,7 @@ namespace KatmanliSP.Service.Services
             return response;
         }
 
-        public List<GetAllCategoryDTO> GetAllCategory()         // list değil, SP DTO alan IResponse dönmeli ListDTO
+        public List<GetAllCategoryDTO> GetAllCategory()
         {
             _parameterList.Reset();
 

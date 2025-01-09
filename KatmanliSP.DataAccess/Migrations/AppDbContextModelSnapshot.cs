@@ -75,6 +75,10 @@ namespace KatmanliSP.DataAccess.Migrations
                     b.Property<int?>("CreatedBy")
                         .HasColumnType("int");
 
+                    b.Property<string>("DescriptionN")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Rolename")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -90,7 +94,7 @@ namespace KatmanliSP.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Roles");
+                    b.ToTable("RolesUpdated");
                 });
 
             modelBuilder.Entity("KatmanliSP.Core.Entities.User", b =>

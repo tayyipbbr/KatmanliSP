@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KatmanliSP.Core.Base
+namespace KatmanliSP.Service.Security
 {
     public interface ITokenCreator
     {
-        string GenerateToken(int userId, string username, List<string> roles);
-        string HashPassword(string password);                                               // HashPassword SP ile çakışabilir, orada yalnızca Password olarak geçiyor.
+        string GenerateToken(string username, int userid, int roleid); 
+        string GenerateHashPassword(string password);      // HashPassword'idi.  // HashPassword SP ile çakışabilir, orada yalnızca Password olarak geçiyor.
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "LmdGY+z/qzY=",
+  "dgSpecHash": "jL/dJJq0QEc=",
   "success": true,
   "projectFilePath": "C:\\Users\\RECEPTAYYİPBİBER\\Source\\Repos\\NTierSP\\KatmanliSP.Service\\KatmanliSP.Service.csproj",
   "expectedPackageFiles": [
@@ -17,7 +17,9 @@
     "C:\\Users\\RECEPTAYYİPBİBER\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\8.0.8\\microsoft.entityframeworkcore.sqlserver.8.0.8.nupkg.sha512",
     "C:\\Users\\RECEPTAYYİPBİBER\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\RECEPTAYYİPBİBER\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.0\\microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",
+    "C:\\Users\\RECEPTAYYİPBİBER\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\RECEPTAYYİPBİBER\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\RECEPTAYYİPBİBER\\.nuget\\packages\\microsoft.extensions.configuration.binder\\8.0.0\\microsoft.extensions.configuration.binder.8.0.0.nupkg.sha512",
     "C:\\Users\\RECEPTAYYİPBİBER\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\RECEPTAYYİPBİBER\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\RECEPTAYYİPBİBER\\.nuget\\packages\\microsoft.extensions.logging\\8.0.0\\microsoft.extensions.logging.8.0.0.nupkg.sha512",

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace KatmanliSP.Core.ResponseMessages
 {
+    // List<Data> döndürebilir miyiz
     public class Response<T> : Result, IResponse<T>
     {
         public Response(bool issuccess, T data) : base(issuccess)
@@ -26,6 +27,11 @@ namespace KatmanliSP.Core.ResponseMessages
         {
             Issuccess = issuccess;
             Message = message;
+        }
+
+        public Response(bool issuccess) : base(issuccess)
+        {
+            Issuccess = issuccess;
         }
         public T Data { get; set; }
     }

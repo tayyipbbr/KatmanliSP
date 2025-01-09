@@ -1,8 +1,6 @@
 ﻿using KatmanliSP.Core.DTOs.CategoryDTO;
-using KatmanliSP.Core.DTOs.ProductDTO;
 using KatmanliSP.Core.ResponseMessages;
 using KatmanliSP.Service.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KatmanliSP.WebAPI.Controllers
